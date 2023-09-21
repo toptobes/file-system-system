@@ -1,4 +1,4 @@
-module Common where
+module FSS.Common where
 
 import qualified Data.Text as T
 

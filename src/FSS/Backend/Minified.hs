@@ -1,12 +1,12 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use head" #-}
 
-module CodeGen.Minified
+module FSS.Backend.Minified
 ( genMinifiedJS,
 ) where
 
-import Common
-import Parsing.AST
+import FSS.Common
+import FSS.Frontend.AST
 import Data.Char (isLetter)
 import qualified Relude.Unsafe as Unsafe
 import qualified Data.Text as T

@@ -1,29 +1,30 @@
 ```bash
-me@MyMachine:~/projects/fss$ cabаl ./fileify readme.fileify ./readme
-... Up to date
 me@MyMachine:~/projects/fss$ tree ./readme
 ./readme
-├── "# Have you ever needed to program something, but you forgot to write in a file?"
-│   ├── "Alas, me neither"
-│   └── "But it's so annoying when it happens!"
+├── "# Have you ever needed to program something, but you forgot how to write in a file?"
+│   ├── ":[ me neither"
+│   └── "But it'd be annoying if it ever were to happen!"
 ├── "...So that's why I created this!"
 │   ├── "A language where you never have to use a pesky text editor again!"
-│   ├── "It transpiles straight to JS, giving you access to a *huge* ecosystem"
-│   └── "Start on your new enterprise today!"
+│   ├── "It transpiles straight to JS, giving you access to a *huge* ecosystem right from the start!"
+│   └── "Start on your next big enterprise today!"
 ├── "From you, it only needs:"
-│   ├── "Access to GHC"
+│   ├── "Access to GHC\Cabal"
 │   ├── "Access to a Linux (or possibly Mac) based machine"
 │   └── "And every last bit of your sanity"
 └── "Some things of note:"
-    ├── "0@The error handling leaves some stuff to be desired"
-    ├── "1@The fss compiler only cares about issues that break transpilation"
-    ├── "2@To see an example of it working, look at demo.js"
-    ├── "3@(It's the formatted output of demo\program\Main.fs)"
-    └── "4@Not going to document it rn because why would I, but here're some quirks:"
-        ├── "0@For import statements, you need to use backslashes instead of forwards"
-        ├── "1@Also the code got a bit messy because uh, I stopped caring, sorry not sorry :("
-        └── "2@TODO()"
+    ├── "0@The fss compiler only cares about issues that break transpilation"
+    ├── "1@To see an example of it working, look at demo.js"
+    ├── "2@(It's the formatted output of demo\program\Main.fs)"
+    ├── "3@To compile the demo, run 'cabal run fss -- .\demo\program'"
+    ├── "4@(Ofc use forward, not back, slashes)"
+    └── "5@Not going to document it rn because why would I, but here're some quirks:"
+        ├── "0@I don't think this works on Windows?"
+        ├── "1@For import statements, you need to use backslashes instead of forwards"
+        ├── "2@It supports multiple modules as well, just suffix the dirs with .fs"
+        ├── "3@Also the code got a bit messy because uh, I stopped caring. Sorry, not sorry :("
+        └── "4@TODO()"
 
-5 directories, 15 files
+5 directories, 18 files
 me@MyMachine:~/projects/fss$
 ```

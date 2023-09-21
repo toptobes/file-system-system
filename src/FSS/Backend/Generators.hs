@@ -1,8 +1,8 @@
-module CodeGen.Generators where
+module FSS.Backend.Generators where
 
-import CodeGen.Minified
-import CodeGen.Pretty (genPrettyJS)
-import Parsing.AST (Module)
+import FSS.Backend.Minified
+import FSS.Backend.Pretty (genPrettyJS)
+import FSS.Frontend.AST (Module)
 
 genJS :: Text -> Module -> (Text, Text)
 genJS "minify" = genMinifiedJS

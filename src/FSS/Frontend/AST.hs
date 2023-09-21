@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use newtype instead of data" #-}
 
-module Parsing.AST where
+module FSS.Frontend.AST where
 
 data Module = Module Text [Text] Body
   deriving Show

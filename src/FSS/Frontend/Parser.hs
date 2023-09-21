@@ -1,10 +1,10 @@
-module Parsing.Parser
+module FSS.Frontend.Parser
 ( buildAST,
 ) where
 
-import Common
-import Parsing.AST
-import Parsing.DirExplorer
+import FSS.Common
+import FSS.Frontend.AST
+import FSS.Frontend.DirExplorer
 import Data.Char (isDigit)
 import qualified Data.Text as T
 
@@ -45,13 +45,11 @@ buildAST (File _) = error "Parsing.Parser.buildAST: Called w/ file instead of di
 buildAST (Dir _ dirs) = map (\dir -> runFSTParser (moduleP dir) dir) dirs
 
 moduleP :: DirTree -> FSTParser Module
-moduleP (File _)      = fstErr "modules must be folders"
-moduleP (Dir fname _) = if ".fs" `T.isSuffixOf` fname
-  then do
-    body <- bodyP
-    imports <- importP <!> []
-    pure $ Module (takeFileName fname) imports body
-  else fstErr "module doesn't end w/ .fs"
+moduleP (File _) = fstErr "modules must be folders!"
+moduleP (Dir fname _) = do
+  body <- bodyP
+  imports <- importP <!> []
+  pure $ Module (takeFileName fname) imports body
 
 importP :: FSTParser [Text]
 importP = withDir "import" getFileNames

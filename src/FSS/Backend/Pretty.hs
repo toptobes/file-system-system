@@ -1,8 +1,8 @@
-module CodeGen.Pretty
+module FSS.Backend.Pretty
 ( genPrettyJS,
 ) where
 
-import Parsing.AST
+import FSS.Frontend.AST
 
 genPrettyJS :: Module -> (Text, Text)
 genPrettyJS = error "CodeGen.Pretty.genPrettyJS: Not yet implemented"

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.r": "c",
+        "unistd.h": "c",
+        "inet.h": "c",
+        "errno.h": "c"
+    }
+}

@@ -19,14 +19,15 @@ extra-source-files:
 
 library
     exposed-modules:
-          CodeGen.Generators
-          CodeGen.Minified
-          CodeGen.Pretty
-          Common
-          Parsing.AST
-          Parsing.DirExplorer
-          Parsing.Parser
+          FSS
     other-modules:
+          FSS.Backend.Generators
+          FSS.Backend.Minified
+          FSS.Backend.Pretty
+          FSS.Common
+          FSS.Frontend.AST
+          FSS.Frontend.DirExplorer
+          FSS.Frontend.Parser
           Paths_fss
     autogen-modules:
           Paths_fss
