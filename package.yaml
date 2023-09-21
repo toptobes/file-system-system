@@ -1,0 +1,44 @@
+name: fss
+version: 0.1.0.0
+synopsis: File-system system; a file-system based programming language
+license: MIT
+author: toptobes
+extra-source-files:
+  - README.md
+  - LICENSE
+  - .gitignore
+
+language: GHC2021
+
+ghc-options:
+  - -Wall
+
+default-extensions:
+  - LambdaCase
+  - OverloadedStrings
+  - BlockArguments
+
+dependencies:
+  - name: base
+    version: ">=4.16.4.0"
+    mixin:
+      - hiding (Prelude)
+  - name: relude
+    version: ">=1.2.0.0"
+    mixin:
+      - (Relude as Prelude)
+      - ""
+  - directory
+  - filepath
+
+library:
+  source-dirs: src
+
+executables:
+  fss:
+    main: Main.hs
+    source-dirs: app
+    dependencies: fss
+  fileify:
+    main: Fileify.hs
+    source-dirs: scripts

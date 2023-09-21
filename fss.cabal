@@ -1,0 +1,98 @@
+cabal-version: 2.0
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:               fss
+version:            0.1.0.0
+synopsis:           File-system system; a file-system based programming language
+license:            MIT
+license-file:       LICENSE
+build-type:         Simple
+author:             toptobes
+maintainer:         toptobes
+extra-source-files:
+      README.md
+      LICENSE
+      .gitignore
+
+library
+    exposed-modules:
+          CodeGen.Generators
+          CodeGen.Minified
+          CodeGen.Pretty
+          Common
+          Parsing.AST
+          Parsing.DirExplorer
+          Parsing.Parser
+    other-modules:
+          Paths_fss
+    autogen-modules:
+          Paths_fss
+    hs-source-dirs:
+          src
+    default-extensions:
+          LambdaCase
+          OverloadedStrings
+          BlockArguments
+    ghc-options: -Wall
+    build-depends:
+          base >=4.16.4.0
+        , directory
+        , filepath
+        , relude >=1.2.0.0
+    mixins:
+          base hiding (Prelude)
+        , relude (Relude as Prelude)
+        , relude 
+    default-language: GHC2021
+
+executable fileify
+    main-is: Fileify.hs
+    other-modules:
+          Paths_fss
+    autogen-modules:
+          Paths_fss
+    hs-source-dirs:
+          scripts
+    default-extensions:
+          LambdaCase
+          OverloadedStrings
+          BlockArguments
+    ghc-options: -Wall
+    build-depends:
+          base >=4.16.4.0
+        , directory
+        , filepath
+        , relude >=1.2.0.0
+    mixins:
+          base hiding (Prelude)
+        , relude (Relude as Prelude)
+        , relude 
+    default-language: GHC2021
+
+executable fss
+    main-is: Main.hs
+    other-modules:
+          Paths_fss
+    autogen-modules:
+          Paths_fss
+    hs-source-dirs:
+          app
+    default-extensions:
+          LambdaCase
+          OverloadedStrings
+          BlockArguments
+    ghc-options: -Wall
+    build-depends:
+          base >=4.16.4.0
+        , directory
+        , filepath
+        , fss
+        , relude >=1.2.0.0
+    mixins:
+          base hiding (Prelude)
+        , relude (Relude as Prelude)
+        , relude 
+    default-language: GHC2021
